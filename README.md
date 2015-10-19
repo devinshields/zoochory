@@ -1,11 +1,13 @@
-# zoochory
+zoochory
+========
+
 A runnable tutorial on how to create and deploy a python module to the Python Package Index (and how to make it pip-installable).
 
 [Zoochory](https://en.wikipedia.org/wiki/Seed_dispersal#By_animals) is a fancy name seeds piggybacking on animals, catching a ride to their new home.
 
 
-Getting Started
----------------
+Making the Package - Getting Started
+------------------------------------
 
 * create an account at [python.org](https://www.python.org/) and at [pypi](https://pypi.python.org/pypi).
 
@@ -76,5 +78,28 @@ hello-world
 # uninstall
 pip uninstall -y zoochory
 ```
+
+
+Creating a Distribution
+-----------------------
+
+* now that we've tested locally are convinced the package behaves as expected, it's time for distribution
+  * should probably write some tests before distribution :-)
+
+* make a [Source Distribution](https://packaging.python.org/en/latest/distributing/#source-distributions)
+
+```
+python setup.py sdist
+```
+
+* and a [universal wheel](https://packaging.python.org/en/latest/distributing/#universal-wheels)
+
+```
+python setup.py bdist_wheel --universal
+```
+
+* x
+
+
 
 
