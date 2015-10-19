@@ -52,6 +52,29 @@ wget https://raw.githubusercontent.com/pypa/sampleproject/master/README.rst
 wget https://raw.githubusercontent.com/pypa/sampleproject/master/MANIFEST.in
 ```
 
+* [As suggested in the instructions](https://packaging.python.org/en/latest/distributing/#your-package), let's create a single top-level package that has the same name as the project.
+  * make it a module by adding an `__init__.py` file
 
+```
+mkdir zoochory
+cd zoochory/
+wget https://raw.githubusercontent.com/pypa/sampleproject/master/sample/__init__.py
+```
+
+* tweak `setup.py` to your liking, then:
+
+* [start testing](https://packaging.python.org/en/latest/distributing/#working-in-development-mode)
+
+```
+# install the package locally
+pip install -e .
+# confirm that it worked via
+pip freeze
+# run an executable script if you made one
+zoochory
+hello-world
+# uninstall
+pip uninstall -y zoochory
+```
 
 
