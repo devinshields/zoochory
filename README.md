@@ -98,8 +98,49 @@ python setup.py sdist
 python setup.py bdist_wheel --universal
 ```
 
-* x
+
+[Uploading to PyPi](https://packaging.python.org/en/latest/distributing/#uploading-your-project-to-pypi)
+--------------------------------------------------------------------------------------------------------
+
+* create an account
+
+* I choose register via the [recomended web form](https://packaging.python.org/en/latest/distributing/#register-your-project)
+  * [form link](https://pypi.python.org/pypi?%3Aaction=submit_form)
+
+* [time to upload](https://packaging.python.org/en/latest/distributing/#upload-your-distributions)
+
+```
+# this will prompt for your pypi.python.org username and password
+twine upload dist/*
+```
 
 
+Confirm that it worked
+----------------------
+
+* check the pypi website
+  * https://pypi.python.org/pypi/zoochory
+
+* start a new virtual environment, install the package, and try running a command
+
+```
+virtualenv venv
+source venv/bin/activate
+pip install zoochory
+hello-world
+```
+
+* should result in a jolly response of:
+  * `Hello, from a pip installed world!`
+
+
+Congratulations!
+----------------
+
+* you've created and deployed a python package to PyPi
+
+* it's now available publicly, far and wide, for all the world to see and use
+
+* pretty neat :-)
 
 
